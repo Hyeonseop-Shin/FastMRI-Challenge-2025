@@ -293,7 +293,7 @@ As long as we checked, the loss log was same. So we're going to list some of the
 ![File_Structure](./imgs/file_structure.png)
 - First of all, git clone our repository at **/root**.
 ```
-    git clone 
+    git clone https://github.com/Hyeonseop-Shin/FastMRI-Challenge-2025 FastMRI_challenge
 ```
 
 ### 2. Build conda environment
