@@ -110,7 +110,7 @@ if __name__ == '__main__':
     """
     Modify Path Below To Test Your Results
     """
-    parser.add_argument('-yp', '--path_your_data', type=Path, default='../result/test_Unet/reconstructions_leaderboard/')
+    parser.add_argument('-yp', '--path_your_data', type=Path, default='/root/FastMRI_challenge/reconstructions_leaderboard')
     parser.add_argument('-key', '--output_key', type=str, default='reconstruction')
     
     args = parser.parse_args()
