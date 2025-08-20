@@ -1,0 +1,9 @@
+results
+logs
+class_indices
+reconstructions_leaderboard
+**/__pycache__
+*.txt
+*.log
+*.csv
+visual
