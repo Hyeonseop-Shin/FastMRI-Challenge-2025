@@ -138,41 +138,71 @@ class EvalMRI:
         ckpt_path2 = dict()
         ckpt_path3 = dict()
         for slice_num in range(args.brain_slice):
-            for acc in [4,8]:
-                brain_key = f"acc{acc}-brain-slice{slice_num}"
-                ckpt_path[brain_key] = os.path.join(args.result_path,
-                                                    brain_arch,
-                                                    args.brain_ckpt,
-                                                    brain_key,
-                                                    "checkpoints/last_model.pt")
-                ckpt_path2[brain_key] = os.path.join(args.result_path,
-                                                     brain_arch,
-                                                     args.brain_ckpt,
-                                                     brain_key,
-                                                     "checkpoints/last_model.pt")
-                ckpt_path3[brain_key] = os.path.join(args.result_path,
-                                                     brain_arch,
-                                                     args.brain_ckpt,
-                                                     brain_key,
-                                                     "checkpoints/last_model.pt")
+            brain_key = f"acc4-brain-slice{slice_num}"
+            ckpt_path[brain_key] = os.path.join(args.result_path,
+                                                brain_arch,
+                                                args.brain_ckpt,
+                                                brain_key,
+                                                "checkpoints/epoch7_fold0.pt")
+            ckpt_path2[brain_key] = os.path.join(args.result_path,
+                                                brain_arch,
+                                                args.brain_ckpt,
+                                                brain_key,
+                                                "checkpoints/epoch7_fold2.pt")
+            ckpt_path3[brain_key] = os.path.join(args.result_path,
+                                                brain_arch,
+                                                args.brain_ckpt,
+                                                brain_key,
+                                                "checkpoints/epoch7_fold4.pt")
+            brain_key = f"acc8-brain-slice{slice_num}"
+            ckpt_path[brain_key] = os.path.join(args.result_path,
+                                                brain_arch,
+                                                args.brain_ckpt,
+                                                brain_key,
+                                                "checkpoints/epoch6_fold0.pt")
+            ckpt_path2[brain_key] = os.path.join(args.result_path,
+                                                brain_arch,
+                                                args.brain_ckpt,
+                                                brain_key,
+                                                "checkpoints/epoch6_fold2.pt")
+            ckpt_path3[brain_key] = os.path.join(args.result_path,
+                                                brain_arch,
+                                                args.brain_ckpt,
+                                                brain_key,
+                                                "checkpoints/epoch6_fold4.pt")
         for slice_num in range(args.knee_slice):
-            for acc in [4,8]:
-                knee_key = f"acc{acc}-knee-slice{slice_num}"
-                ckpt_path[knee_key] = os.path.join(args.result_path,
-                                                   knee_arch,
-                                                   args.knee_ckpt,
-                                                   knee_key,
-                                                   "checkpoints/last_model.pt")
-                ckpt_path2[knee_key] = os.path.join(args.result_path,
-                                                    knee_arch,
-                                                    args.knee_ckpt,
-                                                    knee_key,
-                                                    "checkpoints/last_model.pt")
-                ckpt_path3[knee_key] = os.path.join(args.result_path,
-                                                    knee_arch,
-                                                    args.knee_ckpt,
-                                                    knee_key,
-                                                    "checkpoints/last_model.pt")
+            knee_key = f"acc4-knee-slice{slice_num}"
+            ckpt_path[knee_key] = os.path.join(args.result_path,
+                                                knee_arch,
+                                                args.knee_ckpt,
+                                                knee_key,
+                                                "checkpoints/epoch9_fold1.pt")
+            ckpt_path2[knee_key] = os.path.join(args.result_path,
+                                                knee_arch,
+                                                args.knee_ckpt,
+                                                knee_key,
+                                                "checkpoints/epoch9_fold2.pt")
+            ckpt_path3[knee_key] = os.path.join(args.result_path,
+                                                knee_arch,
+                                                args.knee_ckpt,
+                                                knee_key,
+                                                "checkpoints/epoch9_fold4.pt")
+            knee_key = f"acc8-knee-slice{slice_num}"
+            ckpt_path[knee_key] = os.path.join(args.result_path,
+                                                knee_arch,
+                                                args.knee_ckpt,
+                                                knee_key,
+                                                "checkpoints/epoch9_fold0.pt")
+            ckpt_path2[knee_key] = os.path.join(args.result_path,
+                                                knee_arch,
+                                                args.knee_ckpt,
+                                                knee_key,
+                                                "checkpoints/epoch9_fold3.pt")
+            ckpt_path3[knee_key] = os.path.join(args.result_path,
+                                                knee_arch,
+                                                args.knee_ckpt,
+                                                knee_key,
+                                                "checkpoints/epoch9_fold4.pt")
         self.ckpt_path = ckpt_path
         self.ckpt_path2 = ckpt_path2
         self.ckpt_path3 = ckpt_path3
